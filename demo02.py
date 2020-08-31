@@ -66,18 +66,25 @@ yy = ( 1,2,3,xx)
 print(yy[3]) #这句代表打印yy里面下标为3的值
 print(yy[3][4]) #这句代表打印yy里面下标为3的值里面下标为4的值
 print(len(yy)) #代表打印出yy里面有多少个值
+print(a[0:2]) #截取：代表打印下标为0-2的值；也可以使用index、count的方法
 """
 
 """
 #数组 list/列表
-cc = [1,2,3,"哈哈哈","和嘿嘿",True,"回锅肉",3,"小龙虾",3,4,1,False] 
-print(cc[3])
+a = ["言希","温衡"]
+cc = [a,1,2,3,"温思尔","温思莞",True,"辛达夷",3,"陆流",3,4,1,False] 
+print(cc[0][1]) # 二维元祖取值
+print(cc.index(3)) #index的用法是计算下标为3的数据
+print(cc.count(3)) # count是计算有多少个是3的数据
+print(cc[0:2]) #截取：代表打印下标为0-2的值
 #ps:元组与数组的区别：元组不可修改，数组可以修改；例如下面可以在数组里面加一个append，在元组不可以这样加
 cc.append("append") #append的意思在数组中，在末尾追加数据。代表在元组cc里面追加一个append的值
 cc.insert(5,"insert") #insert的意思是插入，在下标为5的的前面插入一个insert
-cc.remove("和嘿嘿") #remove是删除，删除数组中第一个和嘿嘿
+cc.remove("陆流") #remove是删除，删除数组中第一个陆流的值
 a = cc.pop(8) #pop是取出，把下标为8的值取出来,又赋值给a这样的变量
+print(a)
 cc.append(a) #追加在末尾
+print(cc)
 cc[0] = 9 #把下标为0的值修改成9
 cc.reverse() #把数组颠倒 ;sort排序只能对数字使用，数字倒序sort（reverse=true）
 cc.extend([1,3,2,4]) #把数组合并并追加到末尾
@@ -106,20 +113,23 @@ print(ww)
 """
 #字典{} 键值对 key：volue；ps:字典没有下标，即字典里的值没有顺序
 a = {
-    "name":"小仙女",
+    "name":"永恩",
     "age":"18",
-    "sex":"女"
-    } #"name":"小仙女"，这个就是一个值
-#print(a["name"])
+    "sex":"男"
+    } #"name":"永恩"，这个就是一个值
+print(a)
+
 #a.pop()
 #a.clear()
 #a.get()  #对字典取值要选取key就可以了,如果key不存在，那么直接报错，如果键值对不存在，get取空值
-a.update(name="小精灵") #update是修改，在update里面key相当于一个变量，不需要打引号,
+a.update(name="亚索") #update是修改，在update里面key相当于一个变量，不需要打引号,当key不存在是即是新增
 #但是不建议这种修改方式，因为字典没有下标；
-a["姓名"] = "小女巫" #这种修改方式经常用
+a["姓名"] = "孤儿" #这种修改方式经常用
 print(a.get("name")) #如果key不存在，那么返回空
 print(a.pop("name")) 
 print(list(a.values())) #这个是取字典里面volue的值,list是用来转换格式的
 print(list(a.keys())) #这个是取字典里面key的值，以上是字典经常用的几种方式
+#通用的删除方法，del,可以用来删除数组和字典,数组里面写下标，字典写key
+#del a["name"]
 print(a["姓名"])
 """
